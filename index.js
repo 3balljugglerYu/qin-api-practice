@@ -1,3 +1,4 @@
+const header = document.querySelector("header")
 const main = document.querySelector("main");
 // <main></main>
 const input = document.querySelector("input");
@@ -49,8 +50,11 @@ async function createArticles(){
 }
 
 window.addEventListener("load", createArticles);
+  const h1 = document.createElement("h1")
+  header.appendChild(h1)
+  h1.textContent = "タイトル"
 
-// 投稿ボタンがクリックされたら下記が処理される
+  // 投稿ボタンがクリックされたら下記が処理される
 async function addArticle() {
   const title = input.value;
   const body = textarea.value;
